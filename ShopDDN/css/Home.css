@@ -1,0 +1,81 @@
+body {
+    background-image: url("/imgs/fundo_home.png");
+    background-size: 100% 100vh;
+}
+
+.bemvindo {
+    position: relative;
+    top: 120px;
+    opacity: .4;
+    font-size: 80pt;
+    text-align: center;
+    color: black;
+}
+
+.btn {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border: 1px solid rgb(202, 195, 195);
+    border-width: 0.7px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px #000;
+    width: 200px;
+    text-align: center;
+    font-size: 18pt;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#rodape{
+    background-color: #212529;
+    height: 60px;
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    margin-left: -8px;
+}
+
+.developer{
+    text-align: center;
+    color: #fff;
+}
+
+marquee{
+    margin: 0 auto;
+    position:fixed;
+    bottom: 80px;
+    font-size: 14pt;
+}
+
+@media screen and (max-device-width: 957px) {
+    body {
+        background-size: 100vh 100vh;
+        background-repeat: no-repeat;
+    }
+    
+    .bemvindo {
+        font-size: 45pt;
+    }
+    
+    .btn {
+        color: rgb(255, 255, 255);
+        margin: 20px 0px;
+        font-size: 14pt;
+    }
+
+    marquee{
+        margin: 0 auto;
+        position:fixed;
+        bottom: 80px;
+        font-size: 14pt;
+    }
+ 
+
+}
+

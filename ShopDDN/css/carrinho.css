@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all .2s linear;
+}
+
+:root{
+    --white:rgb(226, 226, 226);
+    --black:#212529;
+    --light-color:rgb(180, 179, 179);
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+    --bg:rgb(241, 240, 240, 0.3);
+}
+
+body{
+    background-color:var(--white);
+}
+
+#content{
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    width: 80%;
+    background-color: rgb(33, 37, 41, 0.6);
+    padding: 10px 0px 20px 10px;
+    box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.container-content{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+#add a{
+    color: var(--white);
+    padding: 5px;
+    font-size: 14pt;
+}
+
+
+#add a:hover{
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+h3{
+    margin: 5px;
+    font-size: 16pt;
+    color: var(--white);
+    text-align: center;
+}
+
+h4{
+    font-family: Tahoma;
+    font-size: 12pt;
+    color: green;
+}
+
+
+#tabela{
+    display: flex;
+    justify-content: center;
+}
+
+#tabela_carrinho{
+    top: 20%;
+    width: 65%;
+    
+}
+th{
+   border: 1px solid rgb(0, 0, 0, 0.5);
+   padding: 5px; 
+}
+.colunas{
+    padding: 5px 5px;
+    border : solid 1px rgb(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.col-qtd{
+    width: 5px;
+}
+.col-total{
+    padding: 5px 5px;
+}
+
+#qtd::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.btn-remover{
+    text-align: center;
+    font-family: Verdana;
+    font-size: 11pt;
+}
+
+.btn-remover a img{
+    width: 38px;
+    height: 38px;
+  
+}
+
+.btn-remover a:hover{
+    opacity: 0.7;
+    transition: 0.1s;
+}
+
+#qtd{
+    border: none;
+    padding: 5px;
+    height: 20px;
+    outline: none;
+    background-color:  transparent;
+}
+
+#btn{
+    display: flex;
+    justify-content: left;
+    margin-left: 18%;
+    margin-top: 2%;
+}
+
+.btn-comprar{
+    background-color: rgb(44, 39, 39);
+    border-radius: 5px;
+    border-width: 0.5px;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 12pt;
+    color: var(--white);
+}
+
+.btn-comprar:hover{
+    color: var(--white);
+    opacity: 0.8;
+    transition: 0.1s;
+}
+
+#atualizar-carrinho{
+    display: flex;
+    float: right;
+    margin-right: 17.5rem;
+    margin-top: .9rem;
+}
+
+#atualizar-carrinho button{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+
+#atualizar-carrinho button:hover{
+    opacity: 0.8;
+}
+
+/* Modal */
+.popup{
+    position:fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1,1);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity
+    0.25s ease-in-out;
+}
+
+.popup-content{
+    background-color: var(--white);
+    padding:45px 75px;
+    width: 384px; 
+    border-radius: 0.5rem;
+    text-align: left;
+    font-family: 'Times New Roman';
+    font-size: 12pt;
+}
+
+
+
+.fecha{
+    float: right;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: -65px;
+    margin-right: -65px;
+    font-size: 18pt;
+    font-family: cursive;
+
+}
+
+.fecha:hover{
+    color: rgb(255, 0, 0);
+}
+
+.mostrar-popup{
+    opacity: 1 ;
+    visibility: visible;
+    transform: scale(1.0);
+}
+
+#contacto{
+    width: 150px;
+}
+
+
+
+#lbl{
+    float: right;
+}
+
+#confirmar_compra{
+    float: right;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 10pt;
+    background:rgb(0, 0, 0);
+}
+
+#confirmar_compra:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(83, 177, 87);
+}
+
+#confirmar_compra:focus {
+    box-shadow: 1px rgb(0, 0, 0, 0.5);
+}
+
+#pagamento{
+    float: right;
+    padding: 8px;
+    background-color: transparent;
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.popup-content input{
+    width: 300px;
+    height: 20px;
+    padding: 8px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    border-bottom: 0.9px solid #fff;
+    outline: none;
+    text-align: left;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14pt;
+    color: rgb(0, 0, 0);
+}
+
+.popup-content input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+@media screen and (max-device-width : 957px) {
+    #content{
+        width: 100%;
+    }
+    
+    #add a{
+        font-size: 10pt;
+    }
+
+    h3{
+        font-size: 12pt;
+    }
+    
+    h4{
+        font-size: 12pt;
+    }
+
+    th{
+       font-size: 7pt;
+       padding: 1px;
+    }
+
+    td{
+        font-size: 9pt;
+    }
+
+    .btn-remover a img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .colunas{
+        font-size: 8pt;
+    }
+
+    #qtd{
+        width:25px;
+        font-size: 8pt;
+
+    }
+
+    #atualizar-carrinho{
+        margin-right: 2rem;
+        margin-top: -.5rem;
+    }
+
+    .btn-comprar{
+        padding: 5px;
+        font-size: 10pt;
+    }
+    
+}
+
+
+
+
+@media screen and (max-device-width : 957px) {
+    /* RESPONSIVIDADE DA MODAL */
+    .popup-content{
+        padding:20px 60px;
+        width: 190px; 
+        font-size: 14pt;
+    }
+
+    .popup-content input{
+        margin-left: -20px !important;
+    }
+    
+    .fecha{
+        margin-top: -45px;
+        margin-right: -45px;
+        font-size: 24pt;
+    }
+    
+    .fecha:active{
+        color: rgb(255, 0, 0);
+    }
+    
+    .mostrar-popup{
+        opacity: 1 ;
+        visibility: visible;
+        transform: scale(1.0);
+    }
+    
+    #confirmar_compra{
+        float: right;
+        margin: 5px;
+        padding: 7px;
+        border: none;
+        color: var(--white);
+        font-size: 10pt;
+        background-color: rgb(53, 53, 53);
+        border: 0.5px solid var(--black);
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    #confirmar_compra:hover {
+        color: var(--white);
+        background-color: var(--black);
+    }
+    
+    #confirmar_compra:focus {
+        box-shadow: 1px rgb(0, 0, 0, 0.5);
+    }
+    
+    #pagamento{
+        float: right;
+        padding: 3px;
+        font-size: 10pt;
+        font-family: 'Times New Roman';
+        margin-right: -30px;
+    }
+
+    #quantidade{
+        width: 40px;
+    }
+    
+    .popup-content input{
+        width: 200px;
+        height: 10px;
+        padding: 8px;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 11pt;
+    }
+
+    form label{
+        font-size: 10pt;
+        margin-left: -20px !important;
+    }
+
+}
+
+
+
+
+
+

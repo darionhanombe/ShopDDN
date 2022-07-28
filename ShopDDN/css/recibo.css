@@ -1,0 +1,101 @@
+body{
+    background: rgb(0, 0, 0, 0.5);
+}
+
+.recibo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#recibo-content{
+    background-color: #fff;
+    width: 300px;
+    box-shadow: 1px 1px 1px 1px #000;
+    border-radius: 8px;
+    padding: 7px;
+} 
+
+#btn-ok{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-recibo{
+    border: solid rgb(170, 156, 156);
+    background: #fff;
+    padding: 7px;
+    width: 70px;
+    text-decoration: none;
+    color: #000;
+    border-width: 0.7px;
+    border-radius: 9px;
+    outline: none;
+    text-align: center;
+    font-size: 10.5pt;
+    margin-right: 20px;
+}
+
+#baixar-recibo{
+    padding: 7px;
+}
+.i-recibo{
+    width: 20px;
+    height: 20px;
+}
+
+#btn-recibo:hover {
+    color: #fff;
+    background-color: rgb(24, 23, 23);
+}
+
+#btn-recibo:focus {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5)
+}
+
+h2{
+    text-align: center;
+    opacity: 0.8;
+}
+
+#conteudo-recibo{
+    margin: 30px;
+}
+
+.requisita, #data, #timer{
+    opacity: 0.7;
+}
+
+.tit-recibo{
+    display: flex;
+    justify-content: center;
+    font-size: 14pt;
+    margin-top: -20px;
+}
+
+
+
+
+@media screen and (max-device-width: 957px) {
+    #recibo-content{
+        width: 290px;
+        padding: 5px;
+    } 
+    
+    #btn-recibo{
+        padding: 10px;
+        width: 100px;
+    }
+
+    #conteudo-recibo{
+        margin: 20px;
+    }
+    
+    .tit-recibo{
+        font-size: 12pt;
+    }
+}
+
+
