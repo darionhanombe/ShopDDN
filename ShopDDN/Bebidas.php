@@ -3,7 +3,7 @@ session_start();
     require_once("php/Conexao.php");
     require_once("php/funcoes/functions.php");
   
-    // SQL QUE TRAZ TODOS PRODUTOS DA TABELA BEBIDAS
+    // SQL QUE TRAZ TODOS PRODUTOS DA TABELA [BEBIDAS]
     $sql = pegarBebidas($conexao);
 ?>
 
