@@ -188,17 +188,39 @@
                     <input type="number" class="form-control" name="contacto" id="contacto" maxlength="9" placeholder = "+258"
                         required>
 
+                    <?php if(isset($_SESSION['usuario'])) {
+                        $nome = $_SESSION['usuario'] ; ?>
+
                     </br>
-                    <label for="nome">Nome</label><br>
-                    <input type="text" autocomplete="off" class="form-control" name="nome" id="nome" maxlength="60" required>
+                        <label for="nome">Nome</label><br>
+                        <input type="text" autocomplete="off" class="form-control" name="nome" id="nome" value = "<?php echo $nome?>" maxlength="60" required>
+
+                    <?php } else {?>
+
+                        </br>
+                        <label for="nome">Nome</label><br>
+                        <input type="text" autocomplete="off" class="form-control" name="nome" id="nome" maxlength="60" required>
+
+                    <?php } ?>
 
                     <br>
                     <label for="conta">Numero da Conta</label><br>
                     <input type="number" class = "fr" name="nrconta" id="conta" maxlength="13">
 
-                    <br>
+                    <?php if(isset($_SESSION['usuario'])) {
+                        $email = $_SESSION['email'] ; ?>
+
+                    </br>
+                    <label for="email">Email</label><br>
+                    <input type="email" autocomplete="off" class="form-control" name="email" id="email" value = "<?php echo $email?>" maxlength="40" required>
+
+                    <?php } else {?>
+                        
+                    </br>
                     <label for="email">Email</label><br>
                     <input type="email" autocomplete="off" class="form-control" name="email" id="email" maxlength="40" required>
+
+                    <?php } ?>
 
                     <br>
                     <label for="endereco">Endereco</label><br>

@@ -301,6 +301,7 @@ class Variaveis{
 
                 if($sql->rowCount() AND password_verify($this->getPassword(), $result['Password'])){
                         $_SESSION['usuario'] =  $result['Nome'];
+                        $_SESSION['email'] = $result['Email'];
                         $_SESSION['cliente_id'] = $result['Cliente_ID'];
                         header("Location:/Produtos.php");
                     } else{

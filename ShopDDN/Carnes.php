@@ -174,9 +174,20 @@ session_start();
                     <label for="quantidade">Quantidade</label><br>
                     <input type="number" class="form-control" name="quantidade" id="quantidade"  min="1" maxlength="3" required>
                     
+                    <?php if(isset($_SESSION['usuario'])) {
+                        $nome = $_SESSION['usuario'] ; ?>
+
                     </br>
-                    <label for="nome">Nome</label><br>
-                    <input type="text" autocomplete="off" class="form-control" name="nome" id="nome" maxlength="60" required>
+                        <label for="nome">Nome</label><br>
+                        <input type="text" autocomplete="off" class="form-control" name="nome" id="nome" value = "<?php echo $nome?>" maxlength="60" required>
+
+                    <?php } else {?>
+
+                        </br>
+                        <label for="nome">Nome</label><br>
+                        <input type="text" autocomplete="off" class="form-control" name="nome" id="nome" maxlength="60" required>
+
+                    <?php } ?>
 
                     <br>
                     <label for="contacto">Contacto</label><br>
@@ -187,9 +198,20 @@ session_start();
                     <label for="conta">Numero da Conta</label><br>
                     <input type="number" class="fr" name="nrconta" id="conta" maxlength="16">
 
-                    <br>
+                    <?php if(isset($_SESSION['usuario'])) {
+                        $email = $_SESSION['email'] ; ?>
+
+                    </br>
+                    <label for="email">Email</label><br>
+                    <input type="email" autocomplete="off" class="form-control" name="email" id="email" value = "<?php echo $email?>" maxlength="40" required>
+
+                    <?php } else {?>
+                        
+                    </br>
                     <label for="email">Email</label><br>
                     <input type="email" autocomplete="off" class="form-control" name="email" id="email" maxlength="40" required>
+
+                    <?php } ?>
 
                     <br>
                     <label for="endereco">Endereco</label><br>
@@ -241,8 +263,17 @@ session_start();
             <h3>Caixa de Reclamacoes</h3>
         <form action="https://formsubmit.co/9ae7d72953c1e3c663a867e4b34a19e9" method="POST" class="needs-validation" novalidate>
             <!-- FORMULARIO DE RECLAMACOES -->
-            <input type="email" class="form-control" name = "Email" placeholder="Email" required autocomplete="off">
-            <input type="text" class = "form-control" name  = "Nome" placeholder="Nome" required autocomplete="off">
+            <?php if(isset($_SESSION['usuario'])) {
+                $email = $_SESSION['email'] ;
+                $nome = $_SESSION['usuario'] ; ?>
+                <input type="email" class="form-control" name = "Email" placeholder="Email" required value = "<?php echo $email?>" autocomplete="off">
+
+                <input type="text" class = "form-control" name  = "Nome" placeholder="Nome" required value = "<?php echo $nome?>" autocomplete="off">
+            <?php } else {?>
+                <input type="email" class="form-control" name = "Email" placeholder="Email" required autocomplete="off">
+
+                <input type="text" class = "form-control" name  = "Nome" placeholder="Nome" required autocomplete="off">
+            <?php } ?>
             <textarea name="Mensagem" class = "msg form-control" cols="30" rows="10" placeholder="Mensagem" required></textarea>
             <input type="hidden" name="_next" value="http://localhost/Carnes.php">
             <button type = "submit" class="btn">Enviar</button>
