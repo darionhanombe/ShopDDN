@@ -207,6 +207,8 @@ function verNome($nome){
     }
 }
 
+
+
 function verConta($numero){
     //VERIFICAR O TAMANHO DO NUMERO DA CONTA
     $conta = strval($numero);
@@ -215,11 +217,9 @@ function verConta($numero){
         return false;
     } elseif(!is_numeric($conta)){
         return false;
-    } elseif(!substr($conta, 0, 1) === "4"){
-        return false;
-    } else{
+    } elseif(substr($conta, 0, 1) === "4"){
         return true;
-        }
+    }
 }
 
 
