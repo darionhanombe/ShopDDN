@@ -66,7 +66,7 @@
         }
     }
 
-    unset($_SESSION['carrinho']);
+    // unset($_SESSION['carrinho']);
  }
 ?>
 

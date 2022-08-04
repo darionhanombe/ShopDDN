@@ -77,6 +77,8 @@ $pdf->Output();
 unset($_SESSION['chave']);
 unset($_SESSION['nome']);
 unset($_SESSION['dta']);
+unset($_SESSION['carrinho']);
+
 
 
 ?>
