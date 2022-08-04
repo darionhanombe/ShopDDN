@@ -1,5 +1,9 @@
 <?php 
     session_start();
+
+    if(!isset($_SESSION['carrinho'])){
+        header("Location:/Produtos.php");
+    }
 	require_once( "php/funcoes/cartoes.php");
     require_once("php/funcoes/functions.php");
 	$conexao = require_once "php/CarConexao.php";
@@ -66,7 +70,6 @@
         }
     }
 
-    // unset($_SESSION['carrinho']);
  }
 ?>
 

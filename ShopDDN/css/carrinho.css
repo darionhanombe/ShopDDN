@@ -225,12 +225,15 @@ th{
     border: none;
     color: #fff;
     font-size: 10pt;
-    background:rgb(0, 0, 0);
+    background-color: rgb(53, 53, 53);
+    border: 0.5px solid #212529;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #confirmar_compra:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgb(83, 177, 87);
+    color: rgb(252, 252, 252);
+    background-color: rgb(20, 20, 20);
 }
 
 #confirmar_compra:focus {

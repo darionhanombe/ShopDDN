@@ -95,7 +95,7 @@ CREATE TABLE `carnes` (
   UNIQUE KEY `Carnes_ID` (`Carnes_ID`),
   KEY `Admin_FK` (`Admin_FK`),
   CONSTRAINT `carnes_ibfk_1` FOREIGN KEY (`Admin_FK`) REFERENCES `administrador` (`Admin_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +104,7 @@ CREATE TABLE `carnes` (
 
 LOCK TABLES `carnes` WRITE;
 /*!40000 ALTER TABLE `carnes` DISABLE KEYS */;
-INSERT INTO `carnes` VALUES (2,7012022015358134,'Carne de Porco','Fresca, 1KG',250,'62befc76f2b83carn1.webp','2022-09-30',1),(3,7012022015633407,'Carne de vaca','Fresca, 1KG',280,'62befd1150946carn5.webp','2022-09-29',1);
+INSERT INTO `carnes` VALUES (2,7012022015358134,'Carne de Porco','Fresca, 1KG',250,'62befc76f2b83carn1.webp','2022-09-30',1),(3,7012022015633407,'Carne de vaca','Fresca, 1KG',280,'62befd1150946carn5.webp','2022-09-29',1),(4,7292022032232994,'Salsicha','1KG',520,'62e3fb3828e6fSalsicha.webp','2022-09-29',1),(5,7292022032425991,'Pedacos','de frango, 1KG',150,'62e3fba967cedfrango.webp','2022-09-30',1),(6,7292022032529328,'Vorse','de Porco',330,'62e3fbe9106fdvorse.webp','2022-08-20',1),(7,7292022034356589,'Peixe vermelho','1KG',596,'62e4003c3799apeixeve.webp','2022-09-30',1);
 /*!40000 ALTER TABLE `carnes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,7 +137,7 @@ CREATE TABLE `carrinho` (
   UNIQUE KEY `Carrinho_ID` (`Carrinho_ID`),
   KEY `Cliente_FK` (`Cliente_FK`),
   CONSTRAINT `carrinho_ibfk_1` FOREIGN KEY (`Cliente_FK`) REFERENCES `cliente` (`Cliente_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,7 +146,7 @@ CREATE TABLE `carrinho` (
 
 LOCK TABLES `carrinho` WRITE;
 /*!40000 ALTER TABLE `carrinho` DISABLE KEYS */;
-INSERT INTO `carrinho` VALUES (1,'Saco de Cebola','Roxa',400,1,846387041,'Dario ','M-Pesa',400,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:21:30',52111330,0,NULL),(2,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'Dario ','M-Pesa',1150,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:21:30',52111330,0,NULL),(3,'Acucar','Brow Sugar, 1KG',70,1,846387041,'Dario ','M-Pesa',70,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:21:30',52111330,0,NULL),(4,'Saco de Cebola','Roxa',400,1,846387041,'Dario ','M-Pesa',400,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:22:44',52271044,0,NULL),(5,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'Dario ','M-Pesa',1150,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:22:44',52271044,0,NULL),(6,'Acucar','Brow Sugar, 1KG',70,1,846387041,'Dario ','M-Pesa',70,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:22:44',52271044,0,NULL),(7,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'DDN','M-Pesa',1150,1150,NULL,'jnhan@gmail.com','Mozal','2022-07-24 17:49:38',54968538,0,NULL),(8,'Saco de Batata','Roxa',480,5,846387041,'DDNhanombe','M-Pesa',2400,11200,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 17:53:37',55397837,0,NULL),(9,'Saco de Cebola','Roxa',400,22,846387041,'DDNhanombe','M-Pesa',8800,11200,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 17:53:38',55397837,0,NULL),(10,'Saco de Cebola','Roxa',400,1,846387041,'Dr DDN','M-Pesa',400,400,NULL,'jnha@gmail.com','Mozal','2022-07-24 17:54:13',55482513,0,NULL),(11,'Saco de Batata','Roxa',480,1,846387041,'Dario','M-Pesa',480,480,NULL,'jnhanombe@gmail.com','Maputo','2022-07-24 18:02:15',60226015,0,NULL),(12,'Farinha de Milho','White Star, 1KG',50,1,846387041,'Dario Domingos','M-Pesa',50,50,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 18:52:55',65213155,0,NULL),(13,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'DDN','M-Pesa',1150,1150,NULL,'jnhanombe@gmail.com','Tchumene','2022-07-24 19:00:25',70023925,0,NULL),(14,'Ovos','Meia Duzia',70,3,846387041,'Dario Nhanombe','M-Pesa',210,210,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 19:11:41',71115241,0,NULL),(15,'Saco de Batata','Roxa',480,1,872876066,'Dario Domingos Nhanombe','E-Mola',480,690,NULL,'jnhanombe59@gmail.com','Tchumene','2022-07-24 19:27:56',72777756,0,NULL),(16,'Ovos','Meia Duzia',70,3,872876066,'Dario Domingos Nhanombe','E-Mola',210,690,NULL,'jnhanombe59@gmail.com','Tchumene','2022-07-24 19:27:56',72777756,0,NULL);
+INSERT INTO `carrinho` VALUES (1,'Saco de Cebola','Roxa',400,1,846387041,'Dario ','M-Pesa',400,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:21:30',52111330,1,NULL),(2,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'Dario ','M-Pesa',1150,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:21:30',52111330,1,NULL),(3,'Acucar','Brow Sugar, 1KG',70,1,846387041,'Dario ','M-Pesa',70,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:21:30',52111330,1,NULL),(4,'Saco de Cebola','Roxa',400,1,846387041,'Dario ','M-Pesa',400,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:22:44',52271044,0,NULL),(5,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'Dario ','M-Pesa',1150,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:22:44',52271044,0,NULL),(6,'Acucar','Brow Sugar, 1KG',70,1,846387041,'Dario ','M-Pesa',70,1620,NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 17:22:44',52271044,0,NULL),(7,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'DDN','M-Pesa',1150,1150,NULL,'jnhan@gmail.com','Mozal','2022-07-24 17:49:38',54968538,0,NULL),(8,'Saco de Batata','Roxa',480,5,846387041,'DDNhanombe','M-Pesa',2400,11200,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 17:53:37',55397837,0,NULL),(9,'Saco de Cebola','Roxa',400,22,846387041,'DDNhanombe','M-Pesa',8800,11200,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 17:53:38',55397837,0,NULL),(10,'Saco de Cebola','Roxa',400,1,846387041,'Dr DDN','M-Pesa',400,400,NULL,'jnha@gmail.com','Mozal','2022-07-24 17:54:13',55482513,0,NULL),(11,'Saco de Batata','Roxa',480,1,846387041,'Dario','M-Pesa',480,480,NULL,'jnhanombe@gmail.com','Maputo','2022-07-24 18:02:15',60226015,0,NULL),(12,'Farinha de Milho','White Star, 1KG',50,1,846387041,'Dario Domingos','M-Pesa',50,50,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 18:52:55',65213155,0,NULL),(13,'Saco de Arroz','Feliz Familia, 25KG',1150,1,846387041,'DDN','M-Pesa',1150,1150,NULL,'jnhanombe@gmail.com','Tchumene','2022-07-24 19:00:25',70023925,0,NULL),(14,'Ovos','Meia Duzia',70,3,846387041,'Dario Nhanombe','M-Pesa',210,210,NULL,'jnhanombe@gmail.com','Tsalala','2022-07-24 19:11:41',71115241,0,NULL),(15,'Saco de Batata','Roxa',480,1,872876066,'Dario Domingos Nhanombe','E-Mola',480,690,NULL,'jnhanombe59@gmail.com','Tchumene','2022-07-24 19:27:56',72777756,0,NULL),(16,'Ovos','Meia Duzia',70,3,872876066,'Dario Domingos Nhanombe','E-Mola',210,690,NULL,'jnhanombe59@gmail.com','Tchumene','2022-07-24 19:27:56',72777756,0,NULL),(17,'Saco de Cebola','Roxa',400,2,846387041,'Dario DDN','Millenium Bim',800,4250,4444444444444444,'jnhanombe59@gmail.com','Mozal','2022-07-30 15:49:51',34975151,0,6),(18,'Saco de Arroz','Feliz Familia, 25KG',1150,3,846387041,'Dario DDN','Millenium Bim',3450,4250,4444444444444444,'jnhanombe59@gmail.com','Mozal','2022-07-30 15:49:51',34975151,0,6);
 /*!40000 ALTER TABLE `carrinho` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,7 +164,7 @@ CREATE TABLE `cliente` (
   `Sexo` varchar(16) NOT NULL,
   `Password` varchar(80) NOT NULL,
   UNIQUE KEY `Cliente_ID` (`Cliente_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,7 +173,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (4,'Dario Domingos Nhanombe','jnhanombe@gmai.com','Masculino','$2y$10$.V0LMiPXIf5KYR4gWYUUL.oE6GFVxrPpidbbTeyDz96VqsIsWvw4W'),(5,'Dario Nhanombe','dnhanombe@gmail.com','Masculino','$2y$10$qNzZJMJcgaA7RHZiRY0oE.EEWiLgOlIWHCrPiVXX589q3XlZK.7F.'),(6,'Dario DDN','jnhanombe59@gmail.com','Masculino','$2y$10$8pYCP8tiQyeTE9GsmxhcqeyMINaXsVGsNT/aS7risD4hqIsCNWD.u');
+INSERT INTO `cliente` VALUES (4,'Dario Domingos Nhanombe','jnhanombe@gmai.com','Masculino','$2y$10$.V0LMiPXIf5KYR4gWYUUL.oE6GFVxrPpidbbTeyDz96VqsIsWvw4W'),(5,'Dario Nhanombe','dnhanombe@gmail.com','Masculino','$2y$10$qNzZJMJcgaA7RHZiRY0oE.EEWiLgOlIWHCrPiVXX589q3XlZK.7F.'),(6,'Dario DDN','jnhanombe59@gmail.com','Masculino','$2y$10$8pYCP8tiQyeTE9GsmxhcqeyMINaXsVGsNT/aS7risD4hqIsCNWD.u'),(7,'Junior Nhanombe','dnhanombe82@gmail.com','Masculino','$2y$10$DFJTPhNsDUYM4e6LStFmUuluSAGOMSvbo.Hc9jDNBD63JThWRwvcG');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +211,7 @@ CREATE TABLE `compra` (
   CONSTRAINT `compra_ibfk_3` FOREIGN KEY (`Frutas_FK`) REFERENCES `frutas` (`Frutas_ID`),
   CONSTRAINT `compra_ibfk_4` FOREIGN KEY (`Carnes_FK`) REFERENCES `carnes` (`Carnes_ID`),
   CONSTRAINT `compra_ibfk_5` FOREIGN KEY (`Cliente_FK`) REFERENCES `cliente` (`Cliente_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +220,7 @@ CREATE TABLE `compra` (
 
 LOCK TABLES `compra` WRITE;
 /*!40000 ALTER TABLE `compra` DISABLE KEYS */;
-INSERT INTO `compra` VALUES (33,4,'Dario Domingos Nhanombe',872876066,'Absa',4004004004004000,'jnhanombe59@gmail.com','Maputo, Tsalala','2022-07-04 20:38:47',1,NULL,NULL,1,NULL,NULL),(34,4,'DDN',872876066,'E-Mola',NULL,'jnhanombe@gmail.com','Malhampsene','2022-07-24 20:24:01',1,NULL,NULL,NULL,2,NULL),(35,4,'Dario DDN',846387041,'M-Pesa',NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 21:48:13',0,12,NULL,NULL,NULL,NULL);
+INSERT INTO `compra` VALUES (33,4,'Dario Domingos Nhanombe',872876066,'Absa',4004004004004000,'jnhanombe59@gmail.com','Maputo, Tsalala','2022-07-04 20:38:47',1,NULL,NULL,1,NULL,NULL),(34,4,'DDN',872876066,'E-Mola',NULL,'jnhanombe@gmail.com','Malhampsene','2022-07-24 20:24:01',1,NULL,NULL,NULL,2,NULL),(35,4,'Dario DDN',846387041,'M-Pesa',NULL,'dnhanombe@gmail.com','Mozal','2022-07-24 21:48:13',0,12,NULL,NULL,NULL,NULL),(36,4,'Dario',846387041,'Millenium Bim',4444444444444444,'dnhanombe82@gmail.com','Tsalala','2022-07-29 13:33:02',0,12,NULL,NULL,NULL,NULL),(37,5,'Dario DDN',846387041,'M-Pesa',NULL,'jnhanombe59@gmail.com','Mozal','2022-07-29 15:51:29',0,NULL,3,NULL,NULL,NULL),(38,5,'Dario DDN',846387041,'M-Pesa',NULL,'jnhanombe59@gmail.com','Mozal','2022-07-30 15:53:38',0,12,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `compra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -305,7 +305,7 @@ CREATE TABLE `relatorio` (
   UNIQUE KEY `Relatorio_ID` (`Relatorio_ID`),
   KEY `Admin_FK` (`Admin_FK`),
   CONSTRAINT `relatorio_ibfk_1` FOREIGN KEY (`Admin_FK`) REFERENCES `administrador` (`Admin_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -314,7 +314,7 @@ CREATE TABLE `relatorio` (
 
 LOCK TABLES `relatorio` WRITE;
 /*!40000 ALTER TABLE `relatorio` DISABLE KEYS */;
-INSERT INTO `relatorio` VALUES (12,1,'Adicionou produto : Saco de Cebola','2022-06-22 15:12:33'),(13,1,'Adicionou produto : Saco de Batata','2022-06-22 15:14:47'),(14,1,'Adicionou produto : Saco de Cebola','2022-06-22 15:15:59'),(15,1,'Adicionou produto : Saco de Batata','2022-06-22 15:17:06'),(16,1,'Adicionou produto : Saco de Arroz','2022-06-22 15:19:07'),(17,1,'Adicionou produto : Jack Daniels Old','2022-06-22 15:24:23'),(18,1,'Adicionou produto : Vinho','2022-06-22 15:25:50'),(19,1,'Adicionou produto : Carne de Porco','2022-06-22 15:27:53'),(20,1,'Adicionou produto : Saco de Arroz','2022-06-22 15:29:06'),(21,1,'Adicionou produto : Farinha de Milho','2022-06-23 10:07:50'),(22,1,'Adicionou produto : Laranjas','2022-06-23 11:16:14'),(23,1,'Adicionou produto : Abacate','2022-06-23 11:19:21'),(24,1,'Adicionou produto : Ovos','2022-06-23 11:31:15'),(25,1,'Novo Admininistrador adicionado : Dario','2022-06-23 14:15:28'),(26,1,'Adicionou produto : Ovos','2022-07-01 13:51:46'),(27,1,'Adicionou produto : Carne de Porco','2022-07-01 13:53:59'),(28,1,'Adicionou produto : Carne de vaca','2022-07-01 13:56:33'),(29,1,'Novo Admininistrador adicionado : DDN','2022-07-04 15:44:25'),(30,1,'Adicionou produto : Acucar','2022-07-05 14:05:57'),(31,1,'Adicionou produto : Uvas','2022-07-05 14:07:29'),(32,1,'Adicionou produto : Macas','2022-07-05 14:10:10'),(33,1,'Adicionou produto : Ananas','2022-07-05 14:14:44'),(34,1,'Adicionou produto : Pera Maca','2022-07-07 12:39:59'),(35,1,'Adicionou produto : Turanjas','2022-07-07 12:42:53'),(36,1,'Adicionou produto : Teste','2022-07-24 19:36:34'),(37,1,'Produto Actualizado','2022-07-24 19:47:10'),(38,1,'Produto Actualizado','2022-07-24 19:47:11'),(39,1,'Produto Actualizado','2022-07-24 19:47:11'),(40,1,'Produto Actualizado','2022-07-24 19:47:11'),(41,1,'Produto Actualizado','2022-07-24 19:47:20'),(42,1,'Produto Actualizado','2022-07-24 19:47:21'),(43,1,'Produto Actualizado','2022-07-24 19:47:21'),(44,1,'Produto Actualizado','2022-07-24 19:47:21'),(45,1,'Produto Actualizado','2022-07-24 19:51:41'),(46,1,'Produto Actualizado','2022-07-24 19:51:42'),(47,1,'Produto Actualizado','2022-07-24 19:51:42'),(48,1,'Produto Actualizado','2022-07-24 19:51:42'),(49,1,'Produto Actualizado','2022-07-24 19:52:08'),(50,1,'Produto Actualizado','2022-07-24 19:52:08'),(51,1,'Produto Actualizado','2022-07-24 19:52:08'),(52,1,'Produto Actualizado','2022-07-24 19:52:08'),(53,1,'Produto Actualizado','2022-07-24 19:54:13'),(54,1,'Produto Actualizado','2022-07-24 19:54:14'),(55,1,'Produto Actualizado','2022-07-24 19:54:14'),(56,1,'Produto Actualizado','2022-07-24 19:54:14'),(57,1,'Produto Teste Apagado!','2022-07-24 20:10:24'),(58,1,'Adicionou produto : Teste','2022-07-24 20:11:23'),(59,1,'Produto Teste Apagado!','2022-07-24 20:12:57'),(60,1,'Adicionou produto : Bananas','2022-07-24 22:39:50'),(61,1,'Adicionou produto : Morangos','2022-07-24 22:43:45'),(62,1,'Adicionou produto : Mac-Mahon','2022-07-24 22:45:44'),(63,1,'Adicionou produto : Heineken','2022-07-24 22:49:43'),(64,1,'Adicionou produto : Orla Maritima','2022-07-24 22:52:48'),(65,1,'Adicionou produto : Txilar','2022-07-24 22:55:59');
+INSERT INTO `relatorio` VALUES (12,1,'Adicionou produto : Saco de Cebola','2022-06-22 15:12:33'),(13,1,'Adicionou produto : Saco de Batata','2022-06-22 15:14:47'),(14,1,'Adicionou produto : Saco de Cebola','2022-06-22 15:15:59'),(15,1,'Adicionou produto : Saco de Batata','2022-06-22 15:17:06'),(16,1,'Adicionou produto : Saco de Arroz','2022-06-22 15:19:07'),(17,1,'Adicionou produto : Jack Daniels Old','2022-06-22 15:24:23'),(18,1,'Adicionou produto : Vinho','2022-06-22 15:25:50'),(19,1,'Adicionou produto : Carne de Porco','2022-06-22 15:27:53'),(20,1,'Adicionou produto : Saco de Arroz','2022-06-22 15:29:06'),(21,1,'Adicionou produto : Farinha de Milho','2022-06-23 10:07:50'),(22,1,'Adicionou produto : Laranjas','2022-06-23 11:16:14'),(23,1,'Adicionou produto : Abacate','2022-06-23 11:19:21'),(24,1,'Adicionou produto : Ovos','2022-06-23 11:31:15'),(25,1,'Novo Admininistrador adicionado : Dario','2022-06-23 14:15:28'),(26,1,'Adicionou produto : Ovos','2022-07-01 13:51:46'),(27,1,'Adicionou produto : Carne de Porco','2022-07-01 13:53:59'),(28,1,'Adicionou produto : Carne de vaca','2022-07-01 13:56:33'),(29,1,'Novo Admininistrador adicionado : DDN','2022-07-04 15:44:25'),(30,1,'Adicionou produto : Acucar','2022-07-05 14:05:57'),(31,1,'Adicionou produto : Uvas','2022-07-05 14:07:29'),(32,1,'Adicionou produto : Macas','2022-07-05 14:10:10'),(33,1,'Adicionou produto : Ananas','2022-07-05 14:14:44'),(34,1,'Adicionou produto : Pera Maca','2022-07-07 12:39:59'),(35,1,'Adicionou produto : Turanjas','2022-07-07 12:42:53'),(36,1,'Adicionou produto : Teste','2022-07-24 19:36:34'),(37,1,'Produto Actualizado','2022-07-24 19:47:10'),(38,1,'Produto Actualizado','2022-07-24 19:47:11'),(39,1,'Produto Actualizado','2022-07-24 19:47:11'),(40,1,'Produto Actualizado','2022-07-24 19:47:11'),(41,1,'Produto Actualizado','2022-07-24 19:47:20'),(42,1,'Produto Actualizado','2022-07-24 19:47:21'),(43,1,'Produto Actualizado','2022-07-24 19:47:21'),(44,1,'Produto Actualizado','2022-07-24 19:47:21'),(45,1,'Produto Actualizado','2022-07-24 19:51:41'),(46,1,'Produto Actualizado','2022-07-24 19:51:42'),(47,1,'Produto Actualizado','2022-07-24 19:51:42'),(48,1,'Produto Actualizado','2022-07-24 19:51:42'),(49,1,'Produto Actualizado','2022-07-24 19:52:08'),(50,1,'Produto Actualizado','2022-07-24 19:52:08'),(51,1,'Produto Actualizado','2022-07-24 19:52:08'),(52,1,'Produto Actualizado','2022-07-24 19:52:08'),(53,1,'Produto Actualizado','2022-07-24 19:54:13'),(54,1,'Produto Actualizado','2022-07-24 19:54:14'),(55,1,'Produto Actualizado','2022-07-24 19:54:14'),(56,1,'Produto Actualizado','2022-07-24 19:54:14'),(57,1,'Produto Teste Apagado!','2022-07-24 20:10:24'),(58,1,'Adicionou produto : Teste','2022-07-24 20:11:23'),(59,1,'Produto Teste Apagado!','2022-07-24 20:12:57'),(60,1,'Adicionou produto : Bananas','2022-07-24 22:39:50'),(61,1,'Adicionou produto : Morangos','2022-07-24 22:43:45'),(62,1,'Adicionou produto : Mac-Mahon','2022-07-24 22:45:44'),(63,1,'Adicionou produto : Heineken','2022-07-24 22:49:43'),(64,1,'Adicionou produto : Orla Maritima','2022-07-24 22:52:48'),(65,1,'Adicionou produto : Txilar','2022-07-24 22:55:59'),(66,1,'Adicionou produto : Salsicha','2022-07-29 15:22:33'),(67,1,'Adicionou produto : Pedacos','2022-07-29 15:24:25'),(68,1,'Adicionou produto : Vorse','2022-07-29 15:25:29'),(69,1,'Adicionou produto : Peixe vermelho','2022-07-29 15:43:56');
 /*!40000 ALTER TABLE `relatorio` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -327,4 +327,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-24 16:02:04
+-- Dump completed on 2022-07-30  9:01:41
