@@ -87,7 +87,7 @@ require_once("Conexao.php");
 
     $pdf->Output();
 
-    // unset($_SESSION['dados']);
-    // unset($_SESSION['registo_carrinho']);
-    // unset($_SESSION['ch']);
+    unset($_SESSION['dados']);
+    unset($_SESSION['registo_carrinho']);
+    unset($_SESSION['ch']);
 ?>
