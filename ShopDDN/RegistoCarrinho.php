@@ -1,5 +1,4 @@
 <?php
-session_set_cookie_params(120); 
 session_start();
     require_once("php/Conexao.php");
 
