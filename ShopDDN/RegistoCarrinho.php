@@ -2,7 +2,7 @@
 session_start();
     require_once("php/Conexao.php");
 
-    if(!isset($_SESSION['admin'])){
+    if(!isset($_SESSION['admin_id'])){
         header("Location:Administrador.php");
     }
 

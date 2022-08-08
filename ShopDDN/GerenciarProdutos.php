@@ -2,7 +2,7 @@
 require_once("php/Conexao.php");
 
 $tipo = $_SESSION['admin_tipo'];
-if(!isset($_SESSION['admin']) OR !$tipo){
+if(!isset($_SESSION['admin_id']) OR !$tipo){
     header("Location:Administrador.php");
 }
 $sql = $conexao->query("SELECT Codigo, Produto, Descricao, Preco FROM Produtos UNION ALL SELECT Codigo, Produto, Descricao, Preco FROM Frutas UNION ALL SELECT Codigo, Produto, Descricao, Preco FROM Bebidas UNION ALL SELECT Codigo, Produto, Descricao, Preco FROM Carnes ORDER BY Codigo");

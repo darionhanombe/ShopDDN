@@ -1,7 +1,7 @@
 <?php session_start();
 
 $tipo = $_SESSION['admin_tipo'];
-if(!isset($_SESSION['admin']) OR !$tipo){
+if(!isset($_SESSION['admin_id']) OR !$tipo){
     header("Location:Administrador.php");
 }
 ?>
