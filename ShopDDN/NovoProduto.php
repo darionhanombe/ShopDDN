@@ -34,7 +34,7 @@ if(!isset($_SESSION['admin_id']) OR !$tipo){
 
 <body>
     <div id = "user">
-            <a name = "sair" class = "sair" href="php/logout.php"><img src="icons/msd.png" alt="Terminar Sessao" title = "Terminar Sessao e Sair"></a>
+            <a name = "sair" class = "sair" href="php/logout.php"><img src="icons/msd.png" alt="Terminar Sessão" title = "Terminar Sessao e Sair"></a>
         <p>
             <?php
                 echo $_SESSION['perfil'];

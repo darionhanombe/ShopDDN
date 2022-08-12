@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/form-validation.css">
     <link rel="stylesheet" href="css/admin.css">
-    <title>Novo Usuario</title>
+    <title>Novo Usuário</title>
     <style>
         .erro, .sucesso{
             text-align: center;
@@ -36,7 +36,7 @@
             unset($_SESSION['newuser']);
         }
     ?>
-        <h2>Novo Usuario</h2>
+        <h2>Novo Usuário</h2>
         <form action = "php/Main.php" method="POST" class="needs-validation" novalidate>
         <p>Sexo
             <select name="sexo" id="sexo" class = "form-control" required>

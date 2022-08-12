@@ -240,7 +240,7 @@ class Variaveis{
             //ADICIONAR NOVO USUARIO
             try {
                 if(!$this->verNome($this->getNome())){
-                    $_SESSION['newuser'] = "<p class = 'erro'>Nome Invalido!</p>";
+                    $_SESSION['newuser'] = "<p class = 'erro'>Nome Inválido!</p>";
                     header("Location:/NovoUsuario.php");
                 } else {
                     $sql = $this->getConexao()->prepare("INSERT INTO Cliente (Nome, Email, Sexo, Password) VALUES (?,?,?,?)");
@@ -252,7 +252,7 @@ class Variaveis{
                     header("Location:/Usuario_Log.php");
                 }
             } catch (Exception $e) {
-                $_SESSION['newuser'] = "Erro ao adicionar Usuario";
+                $_SESSION['newuser'] = "Erro ao adicionar usuário";
                 header("Location:/NovoUsuario.php");
             } 
         }
@@ -285,7 +285,7 @@ class Variaveis{
                         $_SESSION['addadmin'] = "<p class = 'erro'>Erro ao carregar imagem de perfil!</p>";
                     }
                 } else{
-                    $_SESSION['addadmin'] = "<p class = 'erro'>Extensao da imagem nao permitida!</p>";
+                    $_SESSION['addadmin'] = "<p class = 'erro'>Extensão da imagem não permitida!</p>";
                 }
                 header("Location:/Novo_Admin.php");
 
@@ -374,7 +374,7 @@ class Variaveis{
                         $_SESSION['addproduto'] = "<p class = 'erro'>Erro ao carregar imagem do produto!</p>";
                     }
                 } else{
-                    $_SESSION['addproduto'] = "<p class = 'erro'>Extensao da imagem nao permitida!</p>";
+                    $_SESSION['addproduto'] = "<p class = 'erro'>Extensão da imagem não permitida!</p>";
                 }
                 header("Location:../NovoProduto.php");
         }
@@ -382,15 +382,15 @@ class Variaveis{
         function comprar(){
             //COMPRAR PRODUTO   
             if(!$this->verContacto($this->getContacto())){
-                $_SESSION['contacto'] = "<p class = 'erro'>Contacto Invalido!</p>";
+                $_SESSION['contacto'] = "<p class = 'erro'>Contacto Inválido!</p>";
                 header("Location:/{$this->getCategoria()}.php");
             } else if(!$this->verNome($this->getNome())){
-                $_SESSION['contacto'] = "<p class = 'erro'>Nome Invalido!</p>";
+                $_SESSION['contacto'] = "<p class = 'erro'>Nome Inválido!</p>";
                 header("Location:/{$this->getCategoria()}.php");
             } else {
-                        if($this->getPagamento() == "M-Pesa" || $this->getPagamento() == "Conta Movel" || $this->getPagamento() == "E-Mola"){
+                        if($this->getPagamento() == "M-Pesa" || $this->getPagamento() == "Conta Móvel" || $this->getPagamento() == "E-Mola"){
                             if (!$this->verPagamento($this->getPagamento(), $this->getContacto())) {
-                                $_SESSION['contacto'] = "<p class = 'erro'>Contacto invalido para o metodo inserido!</p>";
+                                $_SESSION['contacto'] = "<p class = 'erro'>Contacto inválido para o metódo inserido!</p>";
                                 header("Location:/{$this->getCategoria()}.php");
                             } else{
                                 $sql = $this->getConexao()->prepare("INSERT INTO Compra (Quantidade, Nome, Contacto, Pagamento, Email, Endereco, {$this->getCategoria()}_FK) VALUES (?,?,?,?,?,?,?)");
@@ -405,7 +405,7 @@ class Variaveis{
                             }
                         } else{
                             if(!$this->verConta($this->getConta())){
-                                $_SESSION['contacto'] = "<p class = 'erro'>Numero da Conta Invalido!</p>";
+                                $_SESSION['contacto'] = "<p class = 'erro'>Numero da Conta Inválido!</p>";
                                 header("Location:/{$this->getCategoria()}.php");
                             } else {
                                 $sql = $this->getConexao()->prepare("INSERT INTO Compra (Quantidade, Nome, Contacto, Pagamento, NRConta, Email, Endereco, {$this->getCategoria()}_FK) VALUES (?,?,?,?,?,?,?,?)");
@@ -447,13 +447,13 @@ class Variaveis{
                         'Pagamento :' .$linha['Pagamento'].'<br>'. 
                         'NRConta : ' .$linha['NRConta'].'<br>'.
                         'Email :' .$linha['Email'].'<br>'. 
-                        'Endereco :' .$linha['Endereco']. '<br>';
+                        'Endereço :' .$linha['Endereco']. '<br>';
                        
                 $_SESSION['produtos'] = 
                         'Produto :' .$linha['Produto']. '<br>'.
-                        'Descricao :' .$linha['Descricao']. '<br>'.
+                        'Descrição :' .$linha['Descricao']. '<br>'.
                         'Quantidade :' .$linha['Quantidade']. " ".'Units<br>'.
-                        'Preco : '.$linha['Preco']. 'MT<br>'.
+                        'Preço : '.$linha['Preco']. 'MT<br>'.
                         'Data : ' .$this->getDatacompra().'<br>'.
                         '<strong>TOTAL PAGAMENTO :</strong>'. $linha['Quantidade'] * $linha['Preco']. 'MT';
                 $_SESSION['datacompra'] = $linha['Data'];
@@ -467,14 +467,14 @@ class Variaveis{
                         'Pagamento :' .$line['Pagamento'].'<br>'. 
                         'NRConta : ' .$line['NRConta'].'<br>'.
                         'Email :' .$line['Email'].'<br>'. 
-                        'Endereco :' .$line['Endereco']. '<br>';
+                        'Endereço :' .$line['Endereco']. '<br>';
                        
                 $_SESSION['produtos'] = 
                         'Produto :' .$line['Produto']. '<br>'.
-                        'Descricao :' .$line['Descricao']. '<br>'.
+                        'Descrição :' .$line['Descricao']. '<br>'.
                         'Quantidade :' .$line['Quantidade']. " ".'Units<br>'.
-                        'Preco : '.$line['Preco']. 'MT<br>'.
-                        'Data de requisicao : '.$this->getDatacompra().'<br>'.
+                        'Preço : '.$line['Preco']. 'MT<br>'.
+                        'Data de requisição : '.$this->getDatacompra().'<br>'.
                         '<strong>TOTAL PAGAMENTO :</strong>'. $line['Quantidade'] * $line['Preco']. 'MT';
                 $_SESSION['datacompra'] = $line['Data'];
                 $_SESSION['tabela'] = 'Bebidas';
@@ -488,14 +488,14 @@ class Variaveis{
                         'Pagamento :' .$lin['Pagamento'].'<br>'. 
                         'NRConta : ' .$lin['NRConta'].'<br>'.
                         'Email :' .$lin['Email'].'<br>'. 
-                        'Endereco :' .$lin['Endereco']. '<br>';
+                        'Endereço :' .$lin['Endereco']. '<br>';
                        
                 $_SESSION['produtos'] = 
                         'Produto :' .$lin['Produto']. '<br>'.
-                        'Descricao :' .$lin['Descricao']. '<br>'.
+                        'Descrição :' .$lin['Descricao']. '<br>'.
                         'Quantidade :' .$lin['Quantidade']. " ".'Units<br>'.
-                        'Preco : '.$lin['Preco']. 'MT<br>'.
-                        'Data de requisicao : '.$this->getDatacompra().'<br>'.
+                        'Preço : '.$lin['Preco']. 'MT<br>'.
+                        'Data de requisição : '.$this->getDatacompra().'<br>'.
                         '<strong>TOTAL PAGAMENTO :</strong>'. $lin['Quantidade'] * $lin['Preco']. 'MT';
                 $_SESSION['datacompra'] = $lin['Data'];
                 $_SESSION['tabela'] = 'Carnes';
@@ -509,14 +509,14 @@ class Variaveis{
                         'Pagamento :' .$lne['Pagamento'].'<br>'. 
                         'NRConta : ' .$lne['NRConta'].'<br>'.
                         'Email :' .$lne['Email'].'<br>'. 
-                        'Endereco :' .$lne['Endereco']. '<br>';
+                        'Endereço :' .$lne['Endereco']. '<br>';
                        
                 $_SESSION['produtos'] = 
                         'Produto :' .$lne['Produto']. '<br>'.
-                        'Descricao :' .$lne['Descricao']. '<br>'.
+                        'Descrição :' .$lne['Descricao']. '<br>'.
                         'Quantidade :' .$lne['Quantidade']. " ".'Units<br>'.
-                        'Preco : '.$lne['Preco']. 'MT<br>'.
-                        'Data de requisicao : '.$this->getDatacompra().'<br>'.
+                        'Preço : '.$lne['Preco']. 'MT<br>'.
+                        'Data de requisição : '.$this->getDatacompra().'<br>'.
                         '<strong>TOTAL PAGAMENTO :</strong>'. $lne['Quantidade'] * $lne['Preco']. 'MT';
                 $_SESSION['datacompra'] = $lne['Data'];
                 $_SESSION['tabela'] = 'Frutas';

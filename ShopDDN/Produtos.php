@@ -171,8 +171,8 @@ session_start();
                         </div>
                     <p id = 'card-text'>
                         Produto : <?php echo $produtos['Produto']?><br>
-                        Descricao : <?php echo $produtos['Descricao']?><br>
-                        Preco : <?php echo $produtos['Preco']?>MT<br>
+                        Descrição : <?php echo $produtos['Descricao']?><br>
+                        Preço : <?php echo $produtos['Preco']?>MT<br>
                     </p> 
                         <small id = 'val'>
                             Validade : <?php echo $produtos['Validade']?>
@@ -192,13 +192,13 @@ session_start();
                     <!-- FORMULARIO DE PAGAMENTO -->
                     <label id="lbl" for="pagamento">Pagamento</label><br>
                     <select name="pagamento" id="pagamento" class = "form-control" required>
-                    <option value = "" disabled selected>Metodo</option>
+                    <option value = "" disabled selected>Método</option>
                         <option value="Millenium Bim">Millenium Bim</option>
                         <option value="BCI">BCI</option>
                         <option value="Absa">Absa</option>
                         <option value="M-Pesa">M-Pesa</option>
                         <option value="E-Mola">E-Mola</option>
-                        <option value="Conta Movel">Conta Movel</option>
+                        <option value="Conta Movel">Conta Móvel</option>
                     </select>
 
                     <!-- INPUT HIDDEN QUE RECEBE A CATEGORIA -->
@@ -230,7 +230,7 @@ session_start();
                         required>
 
                     <br>
-                    <label for="conta">Numero da Conta</label><br>
+                    <label for="conta">Número da Conta</label><br>
                     <input type="number" class="fr" name="nrconta" id="conta" maxlength="16">
 
 
@@ -249,7 +249,7 @@ session_start();
 
                     <?php } ?>
                     <br>
-                    <label for="endereco">Endereco</label><br>
+                    <label for="endereco">Endereço</label><br>
                     <input type="text" autocomplete="off" class="form-control" name="endereco" id="endereco" maxlength="20" required>
 
                     <br>

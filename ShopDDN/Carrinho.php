@@ -47,13 +47,13 @@
     $chave = date('hi'.$n.'s');
 
      if(!verContacto($contacto)){
-        $_SESSION['contacto'] = "<p class = 'erro'>Contacto Invalido!</p>";
+        $_SESSION['contacto'] = "<p class = 'erro'>Contacto Inválido!</p>";
     } else if(!verNome($nome)){
-        $_SESSION['contacto'] = "<p class = 'erro'>Nome Invalido!</p>";
+        $_SESSION['contacto'] = "<p class = 'erro'>Nome Inválido!</p>";
     } else{
-        if($pagamento == "M-Pesa" || $pagamento == "Conta Movel" || $pagamento == "E-Mola"){
+        if($pagamento == "M-Pesa" || $pagamento == "Conta Móvel" || $pagamento == "E-Mola"){
             if(!verPagamento($pagamento, $contacto)){
-                $_SESSION['contacto'] = "<p class = 'erro'>Contacto Invalido para o metodo selecionado</p>";
+                $_SESSION['contacto'] = "<p class = 'erro'>Contacto Inválido para o método selecionado</p>";
             }else{
                 foreach($produtos as $carrinho){
                     pagarCarrinho($conexao, $carrinho['Produto'], $carrinho['Descricao'], $carrinho['Preco'], $carrinho['Quantidade'], $contacto, $nome, $pagamento, $carrinho['SubTotal'], $total, $email, $endereco, $chave, $cliente);
@@ -61,7 +61,7 @@
             }
         } else{
             if (!verConta($nrconta)) {
-                $_SESSION['contacto'] = "<p class = 'erro'>Numero da conta invalido!</p>";
+                $_SESSION['contacto'] = "<p class = 'erro'>Número da conta inválido!</p>";
             } else {
                 foreach($produtos as $carrinho){
                     pagaCarrinho($conexao, $carrinho['Produto'], $carrinho['Descricao'], $carrinho['Preco'], $carrinho['Quantidade'], $contacto, $nome, $pagamento, $carrinho['SubTotal'], $total, $nrconta, $email, $endereco, $chave, $cliente);
@@ -133,7 +133,7 @@
     <div id = "tabela">
         <table id = "tabela_carrinho">
             <tr>
-                <th>Produto</th><th>Descricao</th><th>Quantidade</th><th>Preço/Unit</th><th>Sub-Total</th><th>Remover</th>
+                <th>Produto</th><th>Descrição</th><th>Quantidade</th><th>Preço/Unit</th><th>Sub-Total</th><th>Remover</th>
             </tr>
             <?php foreach($produtos as $result) { ?>
             <tr>	
@@ -181,7 +181,7 @@
                         <option value="Absa">Absa</option>
                         <option value="M-Pesa">M-Pesa</option>
                         <option value="E-Mola">E-Mola</option>
-                        <option value="Conta Movel">Conta Movel</option>
+                        <option value="Conta Movel">Conta Móvel</option>
                     </select>
 
                     <!-- INPUT HIIDEN's QUE RECEBE O TOTAL DOS PRODUTOS-->
@@ -207,7 +207,7 @@
                     <?php } ?>
 
                     <br>
-                    <label for="conta">Numero da Conta</label><br>
+                    <label for="conta">Número da Conta</label><br>
                     <input type="number" class = "fr" name="nrconta" id="conta" maxlength="13">
 
                     <?php if(isset($_SESSION['usuario'])) {
@@ -226,7 +226,7 @@
                     <?php } ?>
 
                     <br>
-                    <label for="endereco">Endereco</label><br>
+                    <label for="endereco">Endereço</label><br>
                     <input type="text" autocomplete="off" class="form-control" name="endereco" id="endereco" maxlength="20" required>
                     <br>
                     

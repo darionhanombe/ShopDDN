@@ -66,7 +66,7 @@ session_start();
                 <?php 
                     if(isset($_SESSION['usuario'])){ ?>
                     <!-- USUARIO -->
-                        <a href = 'php/log_out.php' title = "Terminar Sessao"><?php echo $_SESSION['usuario'];?></a>
+                        <a href = 'php/log_out.php' title = "Terminar Sessão"><?php echo $_SESSION['usuario'];?></a>
                 <?php
                     } else{
                         echo "<a href = 'Usuario_Log.php'>Entrar</a>";
@@ -136,8 +136,8 @@ session_start();
                         </div>
                     <p id = 'card-text'>
                         Produto : <?php echo $carnes['Produto']?><br>
-                        Descricao : <?php echo $carnes['Descricao']?><br>
-                        Preco : <?php echo $carnes['Preco']?>MT<br>
+                        Descrição : <?php echo $carnes['Descricao']?><br>
+                        Preço : <?php echo $carnes['Preco']?>MT<br>
                     </p> 
                         <small id = 'val'>
                             Validade : <?php echo $carnes['Validade']?>
@@ -157,13 +157,13 @@ session_start();
                 <!-- FORMULARIO DE PAGAMENTO -->
                     <label id="lbl" for="pagamento">Pagamento</label><br>
                     <select name="pagamento" id="pagamento" class = "form-control" required>
-                    <option value = "" disabled selected>Metodo</option>
+                    <option value = "" disabled selected>Método</option>
                         <option value="Millenium Bim">Millenium Bim</option>
                         <option value="BCI">BCI</option>
                         <option value="Absa">Absa</option>
                         <option value="M-Pesa">M-Pesa</option>
                         <option value="E-Mola">E-Mola</option>
-                        <option value="Conta Movel">Conta Movel</option>
+                        <option value="Conta Movel">Conta Móvel</option>
                     </select>
 
                     <!-- INPUT HIDDEN QUE RECEBE A CATEGORIA -->
@@ -195,7 +195,7 @@ session_start();
                         required>
 
                     <br>
-                    <label for="conta">Numero da Conta</label><br>
+                    <label for="conta">Número da Conta</label><br>
                     <input type="number" class="fr" name="nrconta" id="conta" maxlength="16">
 
                     <?php if(isset($_SESSION['usuario'])) {
@@ -214,7 +214,7 @@ session_start();
                     <?php } ?>
 
                     <br>
-                    <label for="endereco">Endereco</label><br>
+                    <label for="endereco">Endereço</label><br>
                     <input type="text" autocomplete="off" class="form-control" name="endereco" id="endereco" maxlength="20" required>
 
                     <br>
@@ -260,7 +260,7 @@ session_start();
         </div>
 
     <div class="foot reclamacao">
-            <h3>Caixa de Reclamacoes</h3>
+            <h3>Caixa de Reclamações</h3>
         <form action="https://formsubmit.co/9ae7d72953c1e3c663a867e4b34a19e9" method="POST" class="needs-validation" novalidate>
             <!-- FORMULARIO DE RECLAMACOES -->
             <?php if(isset($_SESSION['usuario'])) {
@@ -281,7 +281,7 @@ session_start();
      </div>
     </div>
     <footer id = "rodape">
-    <p class = "developer">Copyright &copy; <br>by Dario Domingos - 2021</p>
+    <p class = "developer">Copyright &copy; <br>by Dário Domingos - 2021</p>
     </footer>
 </section>
 </body>

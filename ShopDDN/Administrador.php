@@ -68,11 +68,11 @@ session_start();
         <form action = "php/Main.php" method="POST" class="needs-validation" novalidate>
         <!-- FORMULARIO DE LOGIN DO ADMIN -->
             <div id="container">
-                <input type="text" class="form-control" name="user" id="" autocomplete="off" placeholder="User" required  >
+                <input type="text" class="form-control" name="user" id="" autocomplete="off" placeholder="User" required>
                 <ico class = "user">A</ico>
             </div>
             <div id="container">
-                <input type="password" class="form-control" name="senha" id="" placeholder="Password" required >
+                <input type="password" class="form-control" name="senha" id="" placeholder="Password" required>
                 <ico class = "pswd">L</ico>
             </div>
             <button name = "entrar" autofocus class="btn entrar">Entrar</button>

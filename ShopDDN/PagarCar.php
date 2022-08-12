@@ -67,7 +67,7 @@ $cont = $conexao->query("SELECT COUNT(*) FROM Carrinho WHERE Chave = $chave");
             ?>  produtos.</p>
                
             <table class = "produtos">
-                    <th>Produto</th> <th>Descricao</th> <th>Qtd</th> <th>Preco</th>
+                    <th>Produto</th> <th>Descrição</th> <th>Qtd</th> <th>Preço</th>
                     <?php foreach ($sql as $res) {?>
                         <tr>
                             <td><?php echo $res['Produtos'] ?></td>
@@ -89,7 +89,7 @@ $cont = $conexao->query("SELECT COUNT(*) FROM Carrinho WHERE Chave = $chave");
                         </tr>
             </table>
             </p>
-            <br>Os seus produtos serao entregues dentro de 2 dias! Obrigado. Continue desfrutando dos nossos produtos.</p>
+            <br>Os seus produtos serão entregues dentro de 2 dias! Obrigado. Continue desfrutando dos nossos produtos.</p>
         </div>
             <div id = "btn-ok">
                 <a href="Produtos.php" id = "btn-recibo" name = "fechar">FECHAR</a>

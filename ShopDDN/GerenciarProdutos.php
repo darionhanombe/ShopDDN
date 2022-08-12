@@ -43,7 +43,7 @@ $sql = $conexao->query("SELECT Codigo, Produto, Descricao, Preco FROM Produtos U
         </ul>
    </nav>
         <div id = "user">
-        <a name = "sair" class = "sair" href="php/logout.php"><img src="icons/msd.png" alt="Terminar Sessao" title = "Terminar Sessao e Sair"></a>
+        <a name = "sair" class = "sair" href="php/logout.php"><img src="icons/msd.png" alt="Terminar Sessão" title = "Terminar Sessão e Sair"></a>
 
             <p>
                 <?php
@@ -69,7 +69,7 @@ $sql = $conexao->query("SELECT Codigo, Produto, Descricao, Preco FROM Produtos U
 
     <div class = "tabela">
         <table class = "tabela_produtos">
-            <th>Produto</th><th>Descricao</th><th>Preco Actual</th><th>Editar</th><th>Apagar</th>
+            <th>Produto</th><th>Descrição</th><th>Preço Actual</th><th>Editar</th><th>Apagar</th>
        
                 <?php foreach (($sql) as $row) {?>
                     <tr>

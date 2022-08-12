@@ -82,7 +82,7 @@ session_start();
 <h3>Produtos Requisitados</h3>
 </p>
         <table class = "produtos">
-            <th>Produto</th><th>Descricao</th><th>Qtd</th> <th>Preco</th><th>Sub-Total</th>
+            <th>Produto</th><th>Descrição</th><th>Qtd</th> <th>Preço</th><th>Sub-Total</th>
             <?php if(isset($_SESSION["dados"])){ ?>
             <?php foreach ($sql as $res) {?>
                         <tr>
@@ -108,7 +108,7 @@ session_start();
                         }?> MT</strong></td>
                         </tr>
             </table>
-        <a href="php/CarConfirm.php" class="btn">Confirmacao</a>
+        <a href="php/CarConfirm.php" class="btn">Confirmação</a>
     </div>
     <script src="js/form-validation.js"></script>
 </body>

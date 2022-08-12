@@ -16,12 +16,12 @@
 
 <marquee>
     Venda de melhores produtos alimentares
-             a bom preco e curto tempo de entrega.
-             Visita ja acima.  ShopDDN<sup>&reg;</sup>
+             a bom preço e curto tempo de entrega.
+             Visita já acima.  ShopDDN<sup>&reg;</sup>
 </marquee>
 
 <footer id = "rodape">
-    <p class = "developer">Copyright &copy; <br>by Dario Domingos - 2021</p>
+    <p class = "developer">Copyright &copy; <br>by Dário Domingos - 2021</p>
 </footer>
 
 </html>

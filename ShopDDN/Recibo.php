@@ -15,7 +15,7 @@ if(!isset($_SESSION['result-data'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/recibo.css">
-    <title>Recibo</title>
+    <title>Recíbo</title>
 
     <style>
         p{
@@ -59,7 +59,7 @@ if(!isset($_SESSION['result-data'])){
             <?php } ?>
 
             <p class = "requisita"><strong>Compra Efectuada com Sucesso!</strong>
-            <br> O seu produto sera entregue dentro de 2 dias! Obrigado. Continue desfrutando dos nossos produtos.</p>
+            <br> O seu produto será entregue dentro de 2 dias! Obrigado. Continue desfrutando dos nossos produtos.</p>
         </div>
             <div id = "btn-ok">
                 <a href="Produtos.php" id = "btn-recibo">FECHAR</a>
